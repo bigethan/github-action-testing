@@ -1,0 +1,14 @@
+name: Assign default reviewer on PR creation
+on:
+  pull_request:
+    types: [opened]
+
+jobs:
+  set_default_reviewer:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Default Reviewer
+        uses: bigethan/action-default-reviewer@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DEFAULT_ASSIGNEE: kaifius

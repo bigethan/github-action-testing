@@ -1,4 +1,4 @@
-name: Assign reviewers based on assignees
+name: Set assignee based on reviewer
 on:
   pull_request:
     types: [review_requested, review_request_removed]
