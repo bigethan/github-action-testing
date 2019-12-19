@@ -1,0 +1,13 @@
+name: Assign reviewers based on assignees
+on:
+  pull_request:
+    types: [review_requested, review_request_removed]
+
+jobs:
+  reviewer_to_assignee:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Reviewer to Assignee
+        uses: bigethan/action-sync-assignee-with-reviewer
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
