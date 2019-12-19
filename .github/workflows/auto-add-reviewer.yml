@@ -8,6 +8,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Reviewer to Assignee
-        uses: bigethan/action-sync-assignee-with-reviewer
+        uses: bigethan/action-sync-assignee-with-reviewer@1.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
